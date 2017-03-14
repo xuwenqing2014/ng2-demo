@@ -1,0 +1,19 @@
+<h1 class = "head">Hello {{head}}</h1>
+<input #name type="text" placeholder="请输入要添加的姓名" />
+<input #age type="text" placeholder="请输入要添加的年龄" />
+<button type="button" (click) = "add(name.value,age.value)">Add</button>
+<ul>
+	<li *ngFor="let item of list">
+		<p>{{item.name}}</p>
+		<p>{{item.age}}</p>
+	</li>
+</ul>
+<input #productInput type="text" [ngClass]="product" placeholder="广告名称 / 广告ID" />
+<button type="button" (click)="changeAction()">切换输入框边框</button>
+<br />
+<br />
+<button type="button" (click)="getAttr()">获取服务的属性</button>
+<br />
+<br />
+<input type="text" [(ngModel)]="msg" name="">
+<child-div haha="这是父组件过来的数据" (btnClick) = "btnAction($event)"></child-div>
